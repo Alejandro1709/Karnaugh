@@ -1,0 +1,501 @@
+<html class="translated-ltr">
+  <head>
+    <title>Karnaugh Maps</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="styl.css" />
+    <script src="scrpt.js"></script>
+  </head>
+  <div class="content">
+    <section class="container">
+      <h1 class="center">
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Mapas De Karnaugh</font></font
+        >
+      </h1>
+      <br />
+      <h2>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >FUNCIÓN BOOLEANA CANÓNICA</font
+          ></font
+        >
+      </h2>
+      <br />
+      <h3>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Variables</font></font
+        >
+      </h3>
+      <p>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >Indicar cuántas variables tendrá la función booleana</font
+          ></font
+        >
+      </p>
+      <br />
+      <p class="center" id="cant-vars">
+        <button class="border-solid icon-circle btnCircleActive" value="3">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">3</font></font
+          >
+        </button>
+        <button class="border-solid icon-circle" value="4">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">4</font></font
+          >
+        </button>
+      </p>
+      <br />
+      <h3>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">TÉRMINOS</font></font
+        >
+      </h3>
+      <br />
+      <div class="row">
+        <div id="t-delete-msj" class="alert" hidden="hidden">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">
+              Haz clic sobre el térmno a eliminar y vuelve a hacer clic para
+              dejar de eliminar</font
+            ></font
+          >
+        </div>
+        <button class="border-solid btn-icon icon-circle" id="term_delete">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">-</font></font
+          >
+        </button>
+        <div class="center terms fx" id="terms-fx">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">f = </font></font
+          >
+          <div class="term">
+            <button class="term-var" value="true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">A</font></font
+              ></button
+            ><button class="term-var" value="true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">B</font></font
+              ></button
+            ><button class="term-var" value="true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">C</font></font
+              >
+            </button>
+          </div>
+        </div>
+        <button class="border-solid btn-icon icon-circle" id="term_add">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">+</font></font
+          >
+        </button>
+      </div>
+      <br />
+      <p>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >Haz clic en la variable para negarla.</font
+          ></font
+        >
+      </p>
+    </section>
+    <section class="container">
+      <h2>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Tabla de Verdad</font></font
+        >
+      </h2>
+      <br />
+      <table id="true-table">
+        <thead>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">N</font></font
+              >
+            </td>
+            <th>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">A</font></font
+              >
+            </th>
+            <th>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">B</font></font
+              >
+            </th>
+            <th>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">C</font></font
+              >
+            </th>
+            <th>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">S</font></font
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">2</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">3</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">4</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">5</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">6</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">7</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+            <td class="result">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">0</font></font
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tr-count">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">8</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td>
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+            <td class="result r-true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">1</font></font
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="container">
+      <h2>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Mapa de Karnaugh</font></font
+        >
+      </h2>
+      <br />
+      <table id="Karnaugh">
+        <tbody>
+          <tr>
+            <td colspan="2" rowspan="2" class="td-empty">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">S</font></font
+              >
+            </td>
+            <th>
+              <div id="kVarsH">
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">C</font></font
+                >
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div id="kVarsHvalues" class="k-values">
+                <div>
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">0</font></font
+                  >
+                </div>
+                <div>
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">1</font></font
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <div id="kVarsV">
+                <font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">A </font></font
+                ><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">B</font></font
+                >
+              </div>
+            </th>
+            <td>
+              <div id="kVarsVvalues" class="k-values">
+                <div>
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">00</font></font
+                  >
+                </div>
+                <div>
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">01</font></font
+                  >
+                </div>
+                <div>
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">11</font></font
+                  >
+                </div>
+                <div>
+                  <font style="vertical-align: inherit"
+                    ><font style="vertical-align: inherit">10</font></font
+                  >
+                </div>
+              </div>
+            </td>
+            <td id="kResults">
+              <table id="k-map">
+                <tr>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                  <td class="r-true">
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">1</font></font
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                  <td>
+                    <font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit">0</font></font
+                    >
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <br /><br />
+      <h3>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Agrupaciones</font></font
+        >
+      </h3>
+      <ul id="k-agrupaciones"></ul>
+      <br /><br />
+    </section>
+  </div>
+</html>
