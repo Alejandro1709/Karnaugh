@@ -7,109 +7,6 @@
   </head>
   <div class="content">
     <section class="container">
-      <h1 class="center">
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit">Mapas De Karnaugh</font></font
-        >
-      </h1>
-      <br />
-      <h2>
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit"
-            >FUNCIÓN BOOLEANA CANÓNICA</font
-          ></font
-        >
-      </h2>
-      <br />
-      <h3>
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit">Variables</font></font
-        >
-      </h3>
-      <p>
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit"
-            >Indicar cuántas variables tendrá la función booleana</font
-          ></font
-        >
-      </p>
-      <br />
-      <p class="center" id="cant-vars">
-        <button class="border-solid icon-circle btnCircleActive" value="3">
-          <font style="vertical-align: inherit"
-            ><font style="vertical-align: inherit">3</font></font
-          >
-        </button>
-        <button class="border-solid icon-circle" value="4">
-          <font style="vertical-align: inherit"
-            ><font style="vertical-align: inherit">4</font></font
-          >
-        </button>
-      </p>
-      <br />
-      <h3>
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit">TÉRMINOS</font></font
-        >
-      </h3>
-      <br />
-      <div class="row">
-        <div id="t-delete-msj" class="alert" hidden="hidden">
-          <font style="vertical-align: inherit"
-            ><font style="vertical-align: inherit">
-              Haz clic sobre el térmno a eliminar y vuelve a hacer clic para
-              dejar de eliminar</font
-            ></font
-          >
-        </div>
-        <button class="border-solid btn-icon icon-circle" id="term_delete">
-          <font style="vertical-align: inherit"
-            ><font style="vertical-align: inherit">-</font></font
-          >
-        </button>
-        <div class="center terms fx" id="terms-fx">
-          <font style="vertical-align: inherit"
-            ><font style="vertical-align: inherit">f = </font></font
-          >
-          <div class="term">
-            <button class="term-var" value="true">
-              <font style="vertical-align: inherit"
-                ><font style="vertical-align: inherit">A</font></font
-              ></button
-            ><button class="term-var" value="true">
-              <font style="vertical-align: inherit"
-                ><font style="vertical-align: inherit">B</font></font
-              ></button
-            ><button class="term-var" value="true">
-              <font style="vertical-align: inherit"
-                ><font style="vertical-align: inherit">C</font></font
-              >
-            </button>
-          </div>
-        </div>
-        <button class="border-solid btn-icon icon-circle" id="term_add">
-          <font style="vertical-align: inherit"
-            ><font style="vertical-align: inherit">+</font></font
-          >
-        </button>
-      </div>
-      <br />
-      <p>
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit"
-            >Haz clic en la variable para negarla.</font
-          ></font
-        >
-      </p>
-      <p>
-        <font style="vertical-align: inherit"
-          ><font style="vertical-align: inherit"
-            >Trabajo Parcial Matemática Discreta UPC 2021-02</font
-          ></font
-        >
-      </p>
-    </section>
-    <section class="container">
       <h2>
         <font style="vertical-align: inherit"
           ><font style="vertical-align: inherit">Tabla de Verdad</font></font
@@ -366,6 +263,7 @@
         </tbody>
       </table>
     </section>
+
     <section class="container">
       <h2>
         <font style="vertical-align: inherit"
@@ -503,6 +401,110 @@
       </h3>
       <ul id="k-agrupaciones"></ul>
       <br /><br />
+    </section>
+
+    <section class="container">
+      <h1 class="center">
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Mapas De Karnaugh</font></font
+        >
+      </h1>
+      <br />
+      <h2>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >FUNCIÓN BOOLEANA CANÓNICA</font
+          ></font
+        >
+      </h2>
+      <br />
+      <h3>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">Variables</font></font
+        >
+      </h3>
+      <p>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >Indicar cuántas variables tendrá la función booleana</font
+          ></font
+        >
+      </p>
+      <br />
+      <p class="center" id="cant-vars">
+        <button class="border-solid icon-circle btnCircleActive" value="3">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">3</font></font
+          >
+        </button>
+        <button class="border-solid icon-circle" value="4">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">4</font></font
+          >
+        </button>
+      </p>
+      <br />
+      <h3>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit">TÉRMINOS</font></font
+        >
+      </h3>
+      <br />
+      <div class="row">
+        <div id="t-delete-msj" class="alert" hidden="hidden">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">
+              Haz clic sobre el térmno a eliminar y vuelve a hacer clic para
+              dejar de eliminar</font
+            ></font
+          >
+        </div>
+        <button class="border-solid btn-icon icon-circle" id="term_delete">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">-</font></font
+          >
+        </button>
+        <div class="center terms fx" id="terms-fx">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">f = </font></font
+          >
+          <div class="term">
+            <button class="term-var" value="true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">A</font></font
+              ></button
+            ><button class="term-var" value="true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">B</font></font
+              ></button
+            ><button class="term-var" value="true">
+              <font style="vertical-align: inherit"
+                ><font style="vertical-align: inherit">C</font></font
+              >
+            </button>
+          </div>
+        </div>
+        <button class="border-solid btn-icon icon-circle" id="term_add">
+          <font style="vertical-align: inherit"
+            ><font style="vertical-align: inherit">+</font></font
+          >
+        </button>
+      </div>
+      <br />
+      <p>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >Haz clic en la variable para negarla.</font
+          ></font
+        >
+      </p>
+      <p>
+        <font style="vertical-align: inherit"
+          ><font style="vertical-align: inherit"
+            >Trabajo Parcial Matemática Discreta UPC 2021-02</font
+          ></font
+        >
+      </p>
     </section>
   </div>
 </html>
